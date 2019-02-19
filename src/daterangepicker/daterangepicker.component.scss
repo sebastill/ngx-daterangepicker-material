@@ -71,8 +71,7 @@ $input-height: 3rem !default;
   background-color: $md-drppicker-bg-color;
   border-radius: 4px;
   width: $md-drppicker-width;
-  padding: 4px;
-  margin-top: -10px;
+  margin-top: -8px;
   overflow: hidden;
   z-index: 1000;
   font-size: 14px;
@@ -201,6 +200,9 @@ $input-height: 3rem !default;
       white-space: nowrap;
       text-align: center;
       min-width: 32px;
+      font-size: 12px;
+      font-weight: normal;
+      
       span {
         pointer-events: none;
       }
@@ -218,19 +220,21 @@ $input-height: 3rem !default;
     width: 100%;
     margin: 0;
   }
+
+  tr {
+    border: none;
+  }
   th {
-    color: #988c8c;
+    color: rgba(61, 63, 73, 0.4);;
   }
   td, th {
     text-align: center;
-    width: $md-drppicker-cell-width;
-    height: $md-drppicker-cell-height;
     border-radius: $md-drppicker-cell-border-radius;
-    border: $md-drppicker-cell-border-size solid $md-drppicker-cell-border-color;
     white-space: nowrap;
     cursor: pointer;
-    height: 2em;
-    width: 2em;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
 
     &.available {
       &.prev {
@@ -303,7 +307,7 @@ $input-height: 3rem !default;
     //
     // Date Range
     &.in-range {
-      background-color: $md-drppicker-in-range-bg-color;
+      background-color: rgba(0, 143, 255, 0.2);
       border-color: $md-drppicker-in-range-border-color;
       color: $md-drppicker-in-range-color;
 
@@ -320,7 +324,7 @@ $input-height: 3rem !default;
     }
 
     &.start-date.end-date {
-      border-radius: $md-drppicker-cell-border-radius;
+      border-radius: 50%;
     }
 
     &.active {
@@ -419,7 +423,6 @@ $input-height: 3rem !default;
         font-size: 18px;
         border-radius: 0;
         border: none;
-        border-bottom: 1px solid rgba(0,0,0, 0.12);
         /* Remove focus */
         &:after {
           position: absolute;
@@ -506,22 +509,26 @@ $input-height: 3rem !default;
     float: none;
     text-align: left;
     margin: 0;
+    padding-top: 8px;
+
     ul {
       list-style: none;
       margin: 0 auto;
       padding: 0;
       width: 100%;
       li {
-        font-size: 12px;
+        font-size: 14px;
         button {
-          padding: 8px 12px;
+          padding: 6px 16px;
           width: 100%;
           background: none;
           border: none;
           text-align: left;
+          line-height: 20px;
+          color: #3d3f49;
           cursor: pointer;
           &.active {
-            background-color: #3f51b5;
+            background-color: $md-drppicker-active-bg-color;
             color: #fff;
           }
           &[disabled] {
@@ -562,16 +569,14 @@ $input-height: 3rem !default;
     cursor: pointer;
     border-radius: 2px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-    background-color: #3f51b5;
+    background-color: #008fff;
     color: #ecf0f1;
     transition: background-color .4s;
     height: auto;
     text-transform: uppercase;
     line-height: 36px;
     border: none;
-    &:hover, &:focus {
-      background-color: #3f51b5;
-    }
+
     & > * {
       position: relative;
     }

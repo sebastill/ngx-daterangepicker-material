@@ -735,7 +735,7 @@
                             //ignore times when comparing dates if time picker seconds is not enabled
                             if (this.startDate.format(format) == this.ranges[range][0].format(format) && this.endDate.format(format) == this.ranges[range][1].format(format)) {
                                 customRange = false;
-                                this.chosenRange = this.rangesArray[i];
+                                this.chosenRange = this.rangesArray[i + 1];
                                 break;
                             }
                         }
@@ -743,7 +743,7 @@
                             //ignore times when comparing dates if time picker is not enabled
                             if (this.startDate.format('YYYY-MM-DD') == this.ranges[range][0].format('YYYY-MM-DD') && this.endDate.format('YYYY-MM-DD') == this.ranges[range][1].format('YYYY-MM-DD')) {
                                 customRange = false;
-                                this.chosenRange = this.rangesArray[i];
+                                this.chosenRange = this.rangesArray[i + 1];
                                 break;
                             }
                         }

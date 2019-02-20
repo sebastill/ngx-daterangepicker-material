@@ -210,15 +210,14 @@ $input-height: 3rem !default;
   }
 
   .calendar-table {
-    border: $md-drppicker-calendar-border-size solid $md-drppicker-calendar-border-color;
-    padding: $md-drppicker-calendar-margin;
-    border-radius: $md-drppicker-calendar-border-radius;
     background-color: $md-drppicker-calendar-bg-color;
+    padding: 16px 12px 16px 16px;
   }
 
   table {
     width: 100%;
     margin: 0;
+    border-spacing: 0;
   }
 
   tr {
@@ -341,6 +340,8 @@ $input-height: 3rem !default;
   th {
     &.month {
       width: auto;
+      font-size: 14px;
+      color: #3d3f49;
     }
   }
 
@@ -648,6 +649,7 @@ $input-height: 3rem !default;
             border-right: none;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            border-left: 1px solid #dce0e3;
           }
         }
 
@@ -658,6 +660,8 @@ $input-height: 3rem !default;
             border-left: none;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+            padding-left: 12px;
+            padding-right: 16px;
           }
         }
       }

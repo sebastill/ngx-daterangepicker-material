@@ -209,11 +209,11 @@ export class DaterangepickerComponent implements OnInit {
 
                 this.ranges[rangeHtml] = [start, end];
             }
-            for (const range in this.ranges) {
-                this.rangesArray.push(range);
-            }
             if (this.showCustomRangeLabel) {
                 this.rangesArray.push(this.locale.customRangeLabel);
+            }
+            for (const range in this.ranges) {
+                this.rangesArray.push(range);
             }
             this.showCalInRanges = (!this.rangesArray.length) || this.alwaysShowCalendars;
             if (!this.timePicker) {

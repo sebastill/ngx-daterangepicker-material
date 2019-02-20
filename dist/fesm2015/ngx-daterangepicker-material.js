@@ -224,11 +224,11 @@ class DaterangepickerComponent {
                 var /** @type {?} */ rangeHtml = elem.value;
                 this.ranges[rangeHtml] = [start, end];
             }
-            for (const /** @type {?} */ range in this.ranges) {
-                this.rangesArray.push(range);
-            }
             if (this.showCustomRangeLabel) {
                 this.rangesArray.push(this.locale.customRangeLabel);
+            }
+            for (const /** @type {?} */ range in this.ranges) {
+                this.rangesArray.push(range);
             }
             this.showCalInRanges = (!this.rangesArray.length) || this.alwaysShowCalendars;
             if (!this.timePicker) {

@@ -187,7 +187,6 @@ $input-height: 3rem !default;
   .calendar {
     /* display: none; */
     max-width: $md-drppicker-width - ($md-drppicker-calendar-margin * 2);
-    margin: $md-drppicker-calendar-margin;
 
     &.single {
       .calendar-table {

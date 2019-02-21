@@ -221,6 +221,10 @@ $input-height: 3rem !default;
 
   tr {
     border: none;
+
+    &.empty-row {
+      display: none;
+    }
   }
   th {
     color: rgba(61, 63, 73, 0.4);;
@@ -313,12 +317,32 @@ $input-height: 3rem !default;
       border-radius: 0;
     }
 
-    &.start-date {
-      border-radius: 2em 0 0 2em;
+    &.start-date:not(.off):not(.end-date) {
+      border-radius: 50%;
+      &::after {
+        content: '';
+        width: 50%;
+        position: absolute;
+        display: block;
+        height: 100%;
+        background-color: rgba(0, 143, 255, 0.2);
+        right: 0;
+        top: 0;
+      }
     }
 
-    &.end-date {
-      border-radius: 0 2em 2em 0;
+    &.end-date:not(.off):not(.start-date) {
+      border-radius: 50%;
+      &::after {
+        content: '';
+        width: 50%;
+        position: absolute;
+        display: block;
+        height: 100%;
+        background-color: rgba(0, 143, 255, 0.2);
+        left: 0;
+        top: 0;
+      }
     }
 
     &.start-date.end-date {

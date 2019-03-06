@@ -377,8 +377,6 @@ export class DaterangepickerComponent implements OnInit {
 
         let curDate = moment([lastYear, lastMonth, startDay, 12, minute, second]);
 
-        console.log(firstDay, lastDay);
-
         for (let i = 0, col = 0, row = 0; i < 42; i++ , col++ , curDate = moment(curDate).add(24, 'hour')) {
             if (i > 0 && col % 7 === 0) {
                 col = 0;

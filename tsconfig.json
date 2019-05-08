@@ -20,9 +20,9 @@
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
-    "skipMetadataEmit": false,
+    "skipMetadataEmit": true,
     "strictMetadataEmit": true,
-    "annotationsAs": "decorators"
+    "annotationsAs": "decorators",
   },
   "include": [
     "src/**/*"

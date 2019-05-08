@@ -69,6 +69,14 @@ export declare class DaterangepickerDirective implements OnInit, OnChanges, DoCh
     registerOnChange(fn: any): void;
     registerOnTouched(fn: any): void;
     private setValue;
+    /**
+     * Set position of the calendar
+     */
     setPosition(): void;
+    /**
+     * For click outside of the calendar's container
+     * @param event event object
+     * @param targetElement target element object
+     */
     outsideClick(event: any, targetElement: HTMLElement): void;
 }

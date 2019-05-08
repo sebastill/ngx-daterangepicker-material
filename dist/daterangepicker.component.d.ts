@@ -86,27 +86,98 @@ export declare class DaterangepickerComponent implements OnInit {
     isCustomDate(date: any): boolean;
     updateView(): void;
     updateMonthsInView(): void;
+    /**
+     *  This is responsible for updating the calendars
+     */
     updateCalendars(): void;
     updateElement(): void;
     remove(): void;
+    /**
+     * this should calculate the label
+     */
     calculateChosenLabel(): void;
     clickApply(e?: any): void;
     clickCancel(e: any): void;
+    /**
+     * called when month is changed
+     * @param monthEvent get value in event.target.value
+     * @param side left or right
+     */
     monthChanged(monthEvent: any, side: SideEnum): void;
+    /**
+     * called when year is changed
+     * @param yearEvent get value in event.target.value
+     * @param side left or right
+     */
     yearChanged(yearEvent: any, side: SideEnum): void;
+    /**
+     * called when time is changed
+     * @param timeEvent  an event
+     * @param side left or right
+     */
     timeChanged(timeEvent: any, side: SideEnum): void;
+    /**
+     *  call when month or year changed
+     * @param month month number 0 -11
+     * @param year year eg: 1995
+     * @param side left or right
+     */
     monthOrYearChanged(month: number, year: number, side: SideEnum): void;
+    /**
+     * Click on previous month
+     * @param side left or right calendar
+     */
     clickPrev(side: SideEnum): void;
+    /**
+     * Click on next month
+     * @param side left or right calendar
+     */
     clickNext(side: SideEnum): void;
+    /**
+     * When selecting a date
+     * @param e event: get value by e.target.value
+     * @param side left or right
+     * @param row row position of the current date clicked
+     * @param col col position of the current date clicked
+     */
     clickDate(e: any, side: SideEnum, row: number, col: number): void;
+    /**
+     *  Click on the custom range
+     * @param e: Event
+     * @param label
+     */
     clickRange(e: any, label: any): void;
     show(e?: any): void;
     hide(e?: any): void;
+    /**
+     * handle click on all element in the component, usefull for outside of click
+     * @param e event
+     */
     handleInternalClick(e: any): void;
+    /**
+     * update the locale options
+     * @param locale
+     */
     updateLocale(locale: any): void;
+    /**
+     *  clear the daterange picker
+     */
     clear(): void;
+    /**
+     * Find out if the selected range should be disabled if it doesn't
+     * fit into minDate and maxDate limitations.
+     */
     disableRange(range: any): any;
+    /**
+     *
+     * @param date the date to add time
+     * @param side left or right
+     */
     private _getDateWithTime;
     private _buildCells;
+    /**
+     * Find out if the current calendar row has current month days
+     * (as opposed to consisting of only previous/next month days)
+     */
     hasCurrentMonthDays(currentMonth: any, row: any): boolean;
 }

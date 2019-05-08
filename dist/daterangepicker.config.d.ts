@@ -1,8 +1,5 @@
 import { InjectionToken } from '@angular/core';
 export declare const LOCALE_CONFIG: InjectionToken<LocaleConfig>;
-/**
- *  LocaleConfig Interface
- */
 export interface LocaleConfig {
     direction?: string;
     separator?: string;
@@ -15,7 +12,4 @@ export interface LocaleConfig {
     firstDay?: number;
     format?: string;
 }
-/**
- *  DefaultLocaleConfig
- */
 export declare const DefaultLocaleConfig: LocaleConfig;
